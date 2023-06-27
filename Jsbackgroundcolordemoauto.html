@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background color auto</title>
+</head>
+<body id="mybody" style="background-color: #CBE896;">
+    <script>
+        var colors=["#CBE896","#F8FCDA","#7C6354", "#F4B886","#B89E97","pink","#F9FBB2"];
+        var mybody=document.getElementById("mybody");
+        var i=0;
+        setInterval(()=>
+        {
+            mybody.style.backgroundColor=colors[i];
+            i++;
+            if(i==colors.length)
+            {
+                i=0;
+            }
+        },1000);
+    </script>
+</body>
+</html>
