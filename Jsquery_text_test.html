@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" 
+       type="text/javascript">
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function()
+        {
+            $("#TxtTestFocus").focus(function()
+            {
+                $(this).css("background-color","pink");
+            });
+            $("#TxtTestBlur").blur(function()
+            {
+                $(this).css("background-color","yellowgreen");
+            });
+            $("#TxtTestKeyPress").keypress(function()
+            {
+                alter($(this).val());
+            });
+            $("#TxtTestKeyUp").keyup(function()
+            {
+                alter($(this).val());
+            });
+        });
+    </script>
+</head>
+<body>
+    <input type="text" id="TxtTestFocus"
+    placeholder="Check Text Box Focus Event...."/><hr/>
+    <input type="text" id="TxtTestBlur"
+    placeholder="Check Text Box Blur Event...."/><hr/>
+    <input type="text" id="TxtTestKeyPress"
+    placeholder="Check Text Box KeyPress Event...."/><hr/>
+    <input type="text" id="TxtTestKeyUp"
+    placeholder="Check Text Box Keyup Event...."/><hr/>
+</body>
+</html>
